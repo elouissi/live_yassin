@@ -9,8 +9,7 @@ $date_limite =$_GET["date_limite"];
 $con=new mysqli("localhost","root","","live_yassin");
 // $query="INSERT INTO `taches` (nom,description,status,date_limite) values ('$nom','$description','$status','$date_limite')";
 // $result=mysqli_query($con,$query);
-$insertData = array('nom' => $nom, 'description' => $description , 'status' => $status ,'date_limite'=> $date_limite);
-insertRecord($con, 'taches', $insertData);
+ //DYNAMIC
 ?>
 <table>
 <thead>
@@ -25,15 +24,14 @@ insertRecord($con, 'taches', $insertData);
 
 <tbody>
 <?php
-$selectResult = selectRecords($con, 'taches');
-while($row=mysqli_fetch_array($selectResult)){
+ //DINAMC SELECT
     ?>
 <tr>
-    <td><?php echo $row['id']?></td>
-    <td><?php echo $row['nom']?></td>
-    <td><?php echo $row['description']?></td>
-    <td><?php echo $row['status']?></td>
-    <td><?php echo $row['date_limite']?></td>
+    <td> </td>
+    <td> </td>
+    <td></td>
+    <td></td>
+    <td> </td>
   
 </tr>
 
@@ -44,7 +42,7 @@ while($row=mysqli_fetch_array($selectResult)){
    
  <?php
      
-}
+
 ?>
 
  
